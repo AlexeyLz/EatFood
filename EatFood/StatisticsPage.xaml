@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EatFood;assembly=EatFood"
+       
+            Title="{local:Translate StatsHeader}"
+ 
+             x:Class="EatFood.StatisticsPage"
+              xmlns:forms ="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
+    <StackLayout>
+        <Label HorizontalTextAlignment="Center" Text="{local:Translate MidDiagram}" FontAttributes="Bold" Margin="0,20"> </Label>
+    <forms:ChartView x:Name="chartView" HeightRequest="150" Margin="0,20"></forms:ChartView>
+        <Label HorizontalTextAlignment="Center" Text="{local:Translate CountDiagram}" FontAttributes="Bold" Margin="0,20"></Label>
+        <forms:ChartView x:Name="chartView_second" HeightRequest="150" Margin="0,20"></forms:ChartView>
+      
+    </StackLayout>
+
+</ContentPage>

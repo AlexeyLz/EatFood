@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:EatFood;assembly=EatFood"
+             x:Class="EatFood.MainPage"
+             >
+    
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="DarkGray">
+            <ContentPage.Content>
+
+                <StackLayout Padding="5,30,5,5">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" d:HorizontalOptions="Center">
+                        <Image WidthRequest="55" HeightRequest="55" Aspect="AspectFit" Source="testPic.png" VerticalOptions="Center"></Image>
+                        <Label Text="{local:Translate ChoseOption}" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold" ></Label>
+                        <Image WidthRequest="55" HeightRequest="55" Aspect="AspectFit" Source="testPic.png" VerticalOptions="Center"></Image>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" d:HorizontalOptions="Center" Margin="0,30" >
+                        <Image WidthRequest="55" HeightRequest="65" Aspect="AspectFit" Source="foodIcon.png" VerticalOptions="Center"></Image>
+                        <Button CornerRadius="20" Text="{local:Translate Adding}" Clicked="AddClick" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" d:HorizontalOptions="Center">
+                        <Image WidthRequest="55" HeightRequest="65" Aspect="AspectFit" Source="foodIcon2.png" VerticalOptions="Center"></Image>
+                        <Button CornerRadius="20" Text="{local:Translate Showing}"  Clicked="ShowClick" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" d:HorizontalOptions="Center" Margin="0,30">
+                        <Image WidthRequest="55" HeightRequest="65" Aspect="AspectFit" Source="stats.png" VerticalOptions="Center"></Image>
+                        <Button CornerRadius="20" Text="{local:Translate Stats}"  Clicked="statisticsClick" HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" d:HorizontalOptions="Center" Margin="0,30">
+                        <Image WidthRequest="55" HeightRequest="65" Aspect="AspectFit" Source="developer.png" VerticalOptions="Center"></Image>
+                        <Button CornerRadius="20" Text="{local:Translate Information}"  Clicked="RecommendClick" HorizontalOptions="FillAndExpand" ></Button>
+                    </StackLayout>
+
+                    
+
+
+
+
+                    
+
+
+
+                </StackLayout>
+
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+    
+
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="LightCoral">
+            <ContentPage.Content>
+                <StackLayout>
+                    <Label Text="{local:Translate StartPageText}" VerticalOptions="Center" 
+                       FontSize="Large" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="0,60"  HorizontalTextAlignment="Center"></Label>
+                    <Label Text="{local:Translate TextStart}"
+                           VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+                    <Image x:Name="pictureRotation" Source="picStart" HorizontalOptions="Center" Margin="0,35"  WidthRequest="200" HeightRequest="200"
+                           Aspect="AspectFit"></Image>
+
+                </StackLayout>
+            </ContentPage.Content>
+
+
+        </ContentPage>
+    </MasterDetailPage.Detail>
+    
+
+ 
+
+</MasterDetailPage>

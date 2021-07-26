@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="EatFood.ProgramInfo"
+             xmlns:local="clr-namespace:EatFood;assembly=EatFood"
+             Title="{local:Translate info}">
+    <TableView>
+        <TableView.Root>
+            <TableRoot>
+
+                <TableSection Title="{local:Translate data}">
+                    <TextCell TextColor="MediumVioletRed" Text="{local:Translate Prog}">
+
+                    </TextCell>
+                    
+                    
+
+                </TableSection>
+                <TableSection Title="{local:Translate idea}">
+                    <TextCell TextColor="MediumVioletRed" Text="{local:Translate ForWhom}">
+
+                    </TextCell>
+                </TableSection>
+               
+
+            
+
+                <TableSection Title="Контакты">
+                    <TextCell TextColor="MediumVioletRed" Text="Email: microsoft@microsoft.com"></TextCell>
+                    <TextCell TextColor="MediumVioletRed" Text="{local:Translate num}"></TextCell>
+                </TableSection>
+
+            </TableRoot>
+        </TableView.Root>
+    </TableView>
+</ContentPage>

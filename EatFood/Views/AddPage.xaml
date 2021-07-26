@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+               xmlns:local="clr-namespace:EatFood;assembly=EatFood"
+             x:Class="EatFood.AddPage"
+             Title="{local:Translate PageAddHeader}">
+ 
+    <ContentPage.Content>
+        
+        <StackLayout>
+
+
+            <Label x:Name="starting" Text="{local:Translate TextAddingTop} " FontSize="Large" HorizontalTextAlignment="Center" Margin="0,20"></Label>
+
+            <Entry x:Name="name" Placeholder="{local:Translate Name}" ></Entry>
+
+            <Picker x:Name="pickerType" SelectedIndexChanged="picker_SelectedIndexChanged" Title="{local:Translate Type}">
+                <!--<Picker.Items>
+                    <x:String>Ресторан</x:String>
+                    <x:String>Кафе</x:String>
+                    <x:String>Фастфуд</x:String>
+                    <x:String>Бар</x:String>
+                    <x:String>Другое</x:String>
+                </Picker.Items>-->
+            </Picker>
+
+            <Entry x:Name="typicalFood" Placeholder="{local:Translate TypicalFood}" ></Entry>
+
+            <Picker x:Name="pickerRating" SelectedIndexChanged="picker_SelectedRating" Title="{local:Translate Rating}">
+                <Picker.Items>
+                    <x:String>★</x:String>
+                    <x:String>★★</x:String>
+                    <x:String>★★★</x:String>
+                    <x:String>★★★★</x:String>
+                    <x:String>★★★★★</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+       
+            
+            
+            
+
+            <!--<Label x:Name="Price" Text="{Binding Source={x:Reference Name=sliderPrice}, 
+                                           Path=Value, 
+                                           StringFormat='Средняя цена посещения заведения {0} BYN'}" Margin="5,5" FontSize="Body">
+            </Label>-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{local:Translate PriceText} " FontSize="Body" Margin="5,0,0,0" ></Label>
+                <Label x:Name="Price2" Text="Test" FontSize="Body"></Label>
+                <Label Text=" BYN" FontSize="Body"></Label>
+
+            </StackLayout>
+            
+            <Stepper x:Name="step" Minimum="0" Maximum="200" Value="15" Increment="3"></Stepper>
+    
+            
+            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="15,0">
+
+            [CTRL+K]+[CTRL+C]
+            
+                <Slider x:Name="sliderPrice"  Minimum="0" Maximum="200" Value="5" ValueChanged="sliderPrice_ValueChanged"
+                        HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" MaximumTrackColor="Red" MinimumTrackColor="Green" HeightRequest="20" />
+                <Stepper x:Name="stepperPrice" Minimum="0" Maximum="200" Value="5" Increment="1" ValueChanged="stepperPrice_ValueChanged"
+                         HorizontalOptions="End" ></Stepper>
+            </StackLayout>-->
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Margin="5,5" Text="{local:Translate AdressText} "></Label>
+            </StackLayout>
+
+            <Entry x:Name="adress" Placeholder="{local:Translate Adress}"></Entry>
+
+
+            <Button x:Name="AdBttn" Text="{local:Translate AddButton}" Clicked="adding_click"></Button>
+           
+            
+            
+       
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
